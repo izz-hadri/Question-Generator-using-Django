@@ -1,0 +1,31 @@
+<section class="row margin-bottom50" id="subscribe">
+  <h1 class="text-center">
+    <strong>Subscribe Membership</strong>
+  </h1>
+  <!-- FOUR COLUMNS -->
+  <div class="row pricetable-container">
+
+    <div class="col-md-4 price-table">
+      <h3>STARTER</h3>
+      <p>
+        Free
+      </p>
+      <ul>
+        <li>Max 100 charachters only.</li>
+      </ul>
+      <a href="#generator" class="btn btn-primary btn-sm scrollTo">GENERATE</a>
+    </div>
+    {% for plan in objPlans %}
+    <div class="col-md-4 price-table popular">
+      <h3>{{plan.planName}}</h3>
+      <p>
+        RM{{plan.planPrice}}
+      </p>
+      <ul>
+        <li>{{plan.planDescription}}</li>
+      </ul>
+      <a href="{% url 'signUp' %}" class="btn btn-primary btn-sm">SIGN UP</a>
+    </div>
+    {% endfor %}
+  </div>
+</section>

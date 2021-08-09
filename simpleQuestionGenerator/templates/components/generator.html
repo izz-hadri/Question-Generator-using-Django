@@ -1,0 +1,43 @@
+<section class="row" id="generator">
+  <h1 class="text-center">
+    <strong>Generator</strong>
+  </h1>
+  <form method="POST">
+    {% csrf_token %}
+    <div class="form-group">
+      <div class="col-md-12">
+        <form method="POST">
+          <textarea maxlength="" data-msg-required="Please enter your text." rows="10" class="form-control"
+            placeholder="Please enter or paste a text here..." name="text" id="text" maxlength="100" onkeyup="Count()"
+            required></textarea>
+          <div class="text-right margin-top10">
+            {% if messages %}
+            <div class="col-md-12 alert alert-danger text-center">
+              <i class="fa fa-frown-o"></i>
+              <strong>{{messages}}</strong>
+            </div>
+            {% endif %}
+            <p name="count" id="count">0/100</p>
+            <input type="submit" value="Generate" class="btn btn-primary" id="submit">
+          </div>
+        </form>
+      </div>
+    </div>
+  </form>
+</section>
+<hr>
+<script>
+  function Count() {
+    var text = document.getElementById("text").value;
+    var count = text.length;
+    if (count > 100) {
+      document.getElementById("count").style.color = "#f44336";
+      document.getElementById("count").innerHTML = count + "/100" + " subscribe <b>membership</b> for unlimited characters";
+      document.getElementById("submit").disabled = true;
+    } else {
+      document.getElementById("count").style.color = "#000000";
+      document.getElementById("count").innerHTML = count + "/100";
+      document.getElementById("submit").disabled = false;
+    }
+  }
+</script>

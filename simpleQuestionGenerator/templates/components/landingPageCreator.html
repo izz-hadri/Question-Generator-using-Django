@@ -1,0 +1,38 @@
+{% load static %}
+
+<div class="fullscreenbanner">
+  <ul>
+    <li data-transition="fade" data-slotamount="7" data-masterspeed="1500">
+      {% if planName == "Standard" %}
+      <img src="{% static './assets/images/landing-page1.jpg' %}" alt="furniturebg22" data-bgfit="cover"
+        data-bgposition="left top" data-bgrepeat="no-repeat">
+      {% elif planName == "Premium" %}
+      <img src="{% static './assets/images/landing-page3.jpg' %}" alt="furniturebg22" data-bgfit="cover"
+        data-bgposition="left top" data-bgrepeat="no-repeat">
+      {% else %}
+      <img src="{% static './assets/images/landing-page2.jpg' %}" alt="furniturebg22" data-bgfit="cover"
+        data-bgposition="left top" data-bgrepeat="no-repeat">
+      {% endif %}
+      <div class="tp-caption large_bold_white skewfromrightshort customout" data-x="center" data-y="center"
+        data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+        data-speed="500" data-start="800" data-easing="Back.easeOut" style="z-index: 2">
+        <h1><b>Simple</b></h1>
+      </div>
+
+      <div class="tp-caption large_bold_white skewfromrightshort customout" data-x="center" data-y="460"
+        data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+        data-speed="500" data-start="800" data-easing="Back.easeOut" style="z-index: 2">
+        <b>Question Generator</b>
+      </div>
+
+      {% if results %}
+      <div class="tp-caption large_bold_white skewfromrightshort customout" data-x="center" data-y="550"
+        data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+        data-speed="500" data-start="800" data-easing="Back.easeOut" style="z-index: 2">
+        <a class="scrollTo" href="#result"><i class="fa fa-arrow-circle-down"></i></a>
+      </div>
+      {% endif %}
+
+    </li>
+  </ul>
+</div>

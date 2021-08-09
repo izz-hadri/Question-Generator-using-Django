@@ -1,0 +1,22 @@
+<header id="topNav">
+  <div class="container">
+    <button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
+      <i class="fa fa-bars"></i>
+    </button>
+    <div class="navbar-collapse nav-main-collapse collapse pull-left">
+      <h4>Simple<strong> Question Generator</strong></h4>
+    </div>
+    <div class="navbar-collapse nav-main-collapse collapse pull-right">
+      <nav class="nav-main mega-menu">
+        <ul class="nav nav-pills nav-main scroll-menu" id="topMain">
+          <li><a class="scrollTo" href="#about">About</a></li>
+          <li><a class="scrollTo" href="#how">How to use</a></li>
+          <li><a class="scrollTo" href="#generator">Generator</a></li>
+          <li><a class="scrollTo" href="#subscribe">Subscribe</a></li>
+          <li><a href="{% url 'signIn' %}">Sign in</a></li>
+          <li><a href="{% url 'signUp' %}"><b>Sign up</b></a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>

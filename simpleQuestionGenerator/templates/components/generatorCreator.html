@@ -1,0 +1,32 @@
+<section class="row margin-bottom50" id="generator">
+  <h1 class="text-center">
+    <strong>Generator</strong>
+  </h1>
+  <form method="POST">
+    {% csrf_token %}
+    <div class="form-group">
+      <div class="col-md-12">
+        <textarea data-msg-required="Please enter your text." rows="10" class="form-control" required
+          placeholder="Please enter or paste a text here..." name="text" id="text" onkeyup="Count()"></textarea>
+        <div class="text-right margin-top10">
+          {% if messages %}
+          <div class="col-md-12 alert alert-danger text-center">
+            <i class="fa fa-frown-o"></i>
+            <strong>{{messages}}</strong>
+          </div>
+          {% endif %}
+          <p name="count" id="count">0/&#8734;</p>
+          <input type="submit" value="Generate" class="btn btn-primary" id="submit">
+        </div>
+      </div>
+    </div>
+  </form>
+</section>
+<script>
+  function Count() {
+    var text = document.getElementById("text").value;
+    var count = text.length;
+    document.getElementById("count").innerHTML = count + "/&#8734;";
+    document.getElementById("submit").disabled = false;
+  }
+</script>
