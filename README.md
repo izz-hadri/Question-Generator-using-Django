@@ -1,4 +1,4 @@
-# SoftInn-Test-using-Django
+# Question-Generator-using-Django
 
 1. download python: 
 	https://www.microsoft.com/store/productId/9P7QFQMJRFP7
