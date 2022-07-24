@@ -34,6 +34,4 @@
 
 
 Additional info:
-
-a.First time execution might take several minutes to generate a question due to downloading process.
-b.If you want to open Database, go to this link and insert superuser data to login: http://127.0.0.1:8000/admin
+a. First time execution might take several minutes to generate a question due to downloading process.
