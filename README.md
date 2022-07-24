@@ -33,5 +33,4 @@
 	http://127.0.0.1:8000/
 
 
-Additional info:
-a. First time execution might take several minutes to generate a question due to downloading process.
+Additional info: First time execution might take several minutes to generate a question due to downloading process.
